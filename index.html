@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nyaya Mitra - Premium Legal Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Plus Jakarta Sans', 'sans-serif'],
+              display: ['Playfair Display', 'serif'], // Proxy for Ambila
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              champagne: {
+                100: '#FAF6E6',
+                200: '#F8EED1',
+                300: '#F3E5AB', // Main Champagne
+                400: '#E6D28C',
+                500: '#D4AF37', // Gold/Dark Champagne
+                600: '#B5942D',
+                900: '#5C4A12',
+              },
+              steelblue: {
+                50: '#F0F6FA',
+                100: '#DAE6F0',
+                200: '#B9CFDF',
+                300: '#90B0CA',
+                400: '#6891B3',
+                500: '#4682B4', // Main Steel Blue
+                600: '#35638A',
+                700: '#264866',
+                800: '#182E42', // Deep Steel
+                900: '#0B141E', // Darkest (Background)
+                950: '#050A0F',
+              },
+              lightblue: {
+                300: '#B0E0E6', // Powder Blue
+                400: '#87CEEB', // Sky Blue
+                500: '#00BFFF', // Deep Sky Blue
+              }
+            },
+            backgroundImage: {
+              'luxury-gradient': 'linear-gradient(135deg, #0B141E 0%, #182E42 100%)',
+              'gold-gradient': 'linear-gradient(to right, #F3E5AB, #D4AF37)',
+              'steel-glass': 'linear-gradient(145deg, rgba(70, 130, 180, 0.1) 0%, rgba(70, 130, 180, 0.02) 100%)',
+            },
+            animation: {
+              'float-slow': 'float 8s ease-in-out infinite',
+              'float-medium': 'float 6s ease-in-out infinite',
+              'pulse-glow': 'pulse-glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'slide-up': 'slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'text-shimmer': 'text-shimmer 3s ease-in-out infinite alternate',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              'pulse-glow': {
+                '0%, 100%': { opacity: '0.6', transform: 'scale(1)' },
+                '50%': { opacity: '1', transform: 'scale(1.05)' },
+              },
+              'slide-up': {
+                '0%': { opacity: '0', transform: 'translateY(40px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              'text-shimmer': {
+                '0%': { color: '#F3E5AB' },
+                '100%': { color: '#D4AF37' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #0B141E;
+        color: #F0F6FA;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+      }
+      
+      /* Smooth Scrolling & Navbar Offset */
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px; /* Ensures content isn't hidden behind fixed navbar */
+      }
+
+      /* Premium Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0B141E; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom, #4682B4, #182E42);
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #D4AF37;
+      }
+
+      /* Selection Color */
+      ::selection {
+        background: #D4AF37;
+        color: #0B141E;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

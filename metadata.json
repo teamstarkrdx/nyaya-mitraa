@@ -1,0 +1,7 @@
+{
+  "name": "Nyaya Mitra",
+  "description": "India's First AI-Powered Legal Assistant Platform. Get instant guidance on family disputes, property issues, cyber crime, and more.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
